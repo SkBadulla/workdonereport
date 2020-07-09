@@ -1,0 +1,12 @@
+#wm{
+	color: blue;
+	font-style: italic;
+	text-align: center;
+	font-size: 80px;
+}
+img{
+	  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

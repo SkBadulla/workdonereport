@@ -20,4 +20,5 @@ from workreport import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.welcomeMsg),
+    path('home/',views.home,name='home'),
 ]

@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def welcomeMsg(request):
 	return HttpResponse('Hi,Welcome to My Page')
+
+def home(request):
+	return render(request,'workreport/home.html',{})

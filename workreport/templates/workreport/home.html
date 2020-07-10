@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'CSS/styles.css' %}">
 </head>
 <body>
+	<h2><a href="{%url 'details'%}">click here</a>to see data</h2>
 <h2 id='wm'>Hi,Welcome to Django</h2>
 <img src="{% static 'Images/django.jpg'%}" height="190px">
 </body>

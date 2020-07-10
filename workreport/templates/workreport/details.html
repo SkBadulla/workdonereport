@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details Page</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<h3 style="text-align: center">Work Details</h3>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th>ProgramName</th>
+				<th>CollegeName</th>
+				<th>DistricName</th>
+				<th>StartDate</th>
+				<th>EndDate</th>
+				<th>RefernceLink</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			{% for info in data%}
+			<tr>
+				<td>{{info.programName}}</td>
+				<td>{{info.collegeName}}</td>
+				<td>{{info.districName}}</td>
+				<td>{{info.startDate}}</td>
+				<td>{{info.endDate}}</td>
+				<td>{{info.refernceLink}}</td>
+			</tr>
+			{%endfor%}
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

@@ -11,5 +11,5 @@ class Details(models.Model):
 	refernceLink = models.CharField(max_length=200)
 
 	def __str__(self):
-		return self.programName+' '+collegeName
+		return self.programName+' '+self.collegeName
 	

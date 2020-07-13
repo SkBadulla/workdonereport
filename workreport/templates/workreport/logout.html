@@ -1,0 +1,12 @@
+{% extends 'workreport/header.html' %}
+{% block title %}SignOut Form {%endblock title%}
+{% block content %}
+<div class='col-md-6' style="margin: auto;margin-top: 30px;">
+	<div class="alert alert-info">
+		<div class="justify-content-center">
+		<h2>you have been logged out </h2>
+			<a href="{%url 'login'%}">click here to login again</a>
+	</div>
+</div>
+</div>
+{%endblock content %}

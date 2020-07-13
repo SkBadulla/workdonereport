@@ -1,0 +1,25 @@
+{% extends 'workreport/header.html' %}
+{% block title %}Update Form {%endblock title%}
+{% block content %}
+
+<div class="row justify-content-center" style="margin: auto;margin-top: 30px;">
+	<div class="col-sm-5">
+		<div class="card">
+		<div class="card-header">
+			{% if request.user.profile.picture %}
+				<img src="/Images/{{request.user.profile.picture}}" height="70px" width="100px">
+			{% endif %}
+		Profile Form</div>
+		<div class="card-body">
+			<h1>{{request.user.details.age}}</h1>
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				
+				{{ form.as_p}}
+				<button class="btn btn-info" type="submit">update</button>
+			</form>
+		</div>
+	</div>
+	</div>
+</div>
+{%endblock content %}

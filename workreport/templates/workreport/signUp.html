@@ -1,0 +1,19 @@
+{% extends 'workreport/header.html' %}
+{% block title %}SignOut Form {%endblock title%}
+{% block content %}
+<div class="row justify-content-center" style="margin: auto;margin-top: 30px;">
+		<div class="col-sm-6 col-md-6">
+			<div class="card">
+	<form method="POST" action="">
+		<div class="card-header bg-primary">Signup Form</div>
+		<div class="card-body">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button class ='btn btn-info'type="submit">SignUp</button>
+		</div>
+	</form>
+	</div>
+		</div>
+	
+</div>
+{%endblock content %}

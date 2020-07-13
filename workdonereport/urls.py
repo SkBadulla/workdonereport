@@ -16,10 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from workreport import views
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.welcomeMsg),
     path('home/',views.home,name='home'),
-    path('details/',views.details,name='details'),
+    path('getinfo/<int:pk>',views.getinfo,name='getinfo'),
+    path('addDetails/<int:pk>',views.addDetails,name='addDetails'),
+    path('signUp/',views.signUp,name='signUp'),
+    path('signin/',auth_views.LoginView.as_view(template_name='workreport/login.html'),name='login'),
+    path('signout/',auth_views.LogoutView.as_view(template_name='workreport/logout.html'),name='logout'),
+    path('profile/<int:pk>',views.profile,name='profile'),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

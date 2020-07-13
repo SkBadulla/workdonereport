@@ -1,13 +1,17 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'CSS/styles.css' %}">
-</head>
-<body>
-	<h2><a href="{%url 'details'%}">click here</a>to see data</h2>
-<h2 id='wm'>Hi,Welcome to Django</h2>
-<img src="{% static 'Images/django.jpg'%}" height="190px">
-</body>
-</html>
+{% extends 'workreport/header.html' %}
+{% block title %}
+Home Page
+{%endblock title%}
+	
+{% block content %}
+<div class="container">
+		<div class="card card-body" style="margin: auto;margin-top: 30px;">
+			Project status reports are timely updates (we’ll discuss how often you should be doing them later) on the progress of your projects. They answer the questions everyone seems to be asking (before they actually ask them). Written concisely, they offer high-level information about a project, rather than every detail.
+<br><br>
+Doing project status reports regularly is important because they help you keep all stakeholders in the loop and aligned on how your project is progressing. You’ll get considerably fewer questions about project status because you’re already ahead of the game. They show (and tell) that you’re on track, making you (and everyone else) feel confident.
+<br>
+<br>
+And if your project isn’t on track, your status report will let others know what the delay is and what you’re doing to resolve any blockers, allowing you to show off your proactive approach to getting things back to where they should be. (A project timeline is another excellent addition to managing your projects).
+		</div>
+	</div>
+{%endblock content %}
